@@ -136,19 +136,17 @@ class LoginPage extends StatelessWidget {
         width: 328,
         height: 40,
         child: TextButton(
-          onPressed: () {},
-          style: TextButton.styleFrom(
-            backgroundColor: kBlueColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(6)
-            )
-          ),
-          child: Text("Continue",
-          style: whiteTextStyle.copyWith(
-            fontWeight: FontWeight.w500
-          ),
-          )
-        ),
+            onPressed: () {
+              Navigator.pushNamed(context, 'home-page');
+            },
+            style: TextButton.styleFrom(
+                backgroundColor: kBlueColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6))),
+            child: Text(
+              "Continue",
+              style: whiteTextStyle.copyWith(fontWeight: FontWeight.w500),
+            )),
       );
     }
 
