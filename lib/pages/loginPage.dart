@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/customWidget/custom_button.dart';
 import 'package:login_page/theme.dart';
 
 class LoginPage extends StatelessWidget {
@@ -131,23 +132,13 @@ class LoginPage extends StatelessWidget {
     }
 
     Widget submitButton() {
-      return Container(
+      return CustomButton(
         margin: EdgeInsets.only(top: 40),
-        width: 328,
-        height: 40,
-        child: TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, 'home-page');
-            },
-            style: TextButton.styleFrom(
-                backgroundColor: kBlueColor,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6))),
-            child: Text(
-              "Continue",
-              style: whiteTextStyle.copyWith(fontWeight: FontWeight.w500),
-            )),
-      );
+        tittle: 'Continue', 
+        onPressed: (){
+          Navigator.pushNamed(context, '/home-page');
+        },
+        );
     }
 
     return Scaffold(

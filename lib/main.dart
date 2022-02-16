@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/homePage.dart';
-import 'package:login_page/loginPage.dart';
+import 'package:login_page/notification/notification_service.dart';
+import 'package:login_page/pages/HomePage.dart';
+import 'package:login_page/pages/choosefood.dart';
+import 'package:login_page/pages/loginPage.dart';
+
 
 void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  NotificationService().initNotification();
+
   runApp(MyApp());
 }
 
@@ -15,7 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => LoginPage(),
-        'home-page': (context) => HomePage(),
+        '/home-page': (context) => HomePages(),
+        '/choose-food':(context) => ChooseFood(),
       },
       // home: LoginPage(),
     );

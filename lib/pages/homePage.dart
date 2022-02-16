@@ -3,8 +3,8 @@ import 'package:login_page/customWidget/kategori.dart';
 import 'package:login_page/customWidget/promoCard.dart';
 import 'package:login_page/theme.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePages extends StatelessWidget {
+  const HomePages({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
